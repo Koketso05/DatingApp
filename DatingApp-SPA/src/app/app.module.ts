@@ -4,17 +4,26 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavComponent } from './nav/nav.component';
+import { AuthService } from './_services/auth.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      NavComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      ReactiveFormsModule,
+      NgbModule
+   ],
+   providers: [
+      AuthService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
