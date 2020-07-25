@@ -1,0 +1,19 @@
+<form [formGroup] = "registerForm" (submit)="register()">
+  
+  <h2 class="text-center text-primary">Sign Up</h2>
+  <hr>
+
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="username" placeholder="Username">
+  </div>
+
+  <div class="form-group">
+    <input type="password" class="form-control" formControlName="password" placeholder="Passwod">
+  </div>
+
+  <div class="form-group text-control">
+    <button class="btn btn-success mr-2" type="submit">Register</button>
+    <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+  </div>
+
+</form>
